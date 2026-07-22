@@ -96,4 +96,20 @@ plt.show()
 
 print("相関係数:", correlation)
 
+image_dir = base_dir / "images"
+image_dir.mkdir(exist_ok=True)
+
+plt.savefig(
+    image_dir / "temperature_tourism_analysis.png",
+    dpi=200,
+    bbox_inches="tight"
+)
+
+saved_image = image_dir / "temperature_tourism_analysis.png"
+
+print("画像保存先:", saved_image.resolve())
+print("画像あり:", saved_image.exists())
+
 plt.show()
+
+
