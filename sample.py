@@ -81,6 +81,19 @@ for _, row in analysis_df.iterrows():
     analysis_df["観光客数"]
 )
 
+# グラフを作る既存コード
+
+image_dir = base_dir / "images"
+image_dir.mkdir(exist_ok=True)
+
+plt.savefig(
+    image_dir / "temperature_tourism_analysis.png",
+    dpi=200,
+    bbox_inches="tight"
+)
+
+plt.show()
+
 print("相関係数:", correlation)
 
 plt.show()
